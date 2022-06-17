@@ -97,6 +97,54 @@ header {
     display: block;
   }
 }
+.banner__top-link .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.banner__top-link {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.banner__top-link .popupText {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+.banner__top-link.popupText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.banner__top-link .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
 @media (min-width: 1024px) {
   .section {
     display: flex;
@@ -410,6 +458,16 @@ header {
   justify-content: center;
 }
 
+@media (min-width: 1366px) {
+  .banner__bottom-wrap {
+    align-items: center;
+    padding: 53px 16px 41px 35px;
+    justify-content: space-around;
+  }
+  .banner__bottom-text {
+    margin-left: 15px;
+  }
+}
 .banner__bottom-row {
   display: flex;
   justify-content: space-between;
@@ -448,13 +506,18 @@ header {
     flex-direction: row;
   }
 }
+@media (min-width: 1366px) {
+  .banner__bottom-sum {
+    font-size: 76px;
+    line-height: 60px;
+  }
+}
 .banner__bottom-text {
   font-family: "Suisse Int'l", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 11px;
   line-height: 12px;
-  /* or 109% */
   margin-top: 11px;
   display: flex;
   align-items: center;
@@ -474,8 +537,24 @@ header {
     line-height: 16px;
   }
 }
+@media (min-width: 1366px) {
+  .banner__bottom-text {
+    font-size: 21px;
+    line-height: 28px;
+    width: 40%;
+  }
+}
 .banner__bottom-plus {
   margin-right: 8px;
+}
+
+@media (min-width: 1366px) {
+  .banner__bottom-plus {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+    margin-left: -60px;
+  }
 }
 
 /*# sourceMappingURL=custom-output.css.map */
