@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Suisse Int'l Bold";
-  src: url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.eot");
-  src: url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.woff") format("woff"), url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.svg#Suisse Int'l Bold") format("svg");
-}
 html {
   box-sizing: border-box;
 }
@@ -22,6 +17,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -136,10 +132,6 @@ header {
     margin-right: 140px;
   }
 }
-.advert__banner-teams span {
-  font-family: vul;
-}
-
 .advert__banner-left {
   display: flex;
   flex-direction: column;
@@ -166,6 +158,7 @@ header {
 }
 
 .advert__banner-right {
+  font-family: "Suisse Int'l", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
@@ -238,8 +231,16 @@ header {
   display: none;
 }
 
+@media (min-width: 375px) {
+  .mobile, .desk, .tablet {
+    display: none;
+  }
+  .iphone11 {
+    display: block;
+  }
+}
 @media (min-width: 768px) {
-  .mobile, .desk {
+  .mobile, .desk, .iphone11 {
     display: none;
   }
   .tablet {
@@ -247,7 +248,7 @@ header {
   }
 }
 @media (min-width: 1366px) {
-  .mobile, .tablet {
+  .mobile, .tablet, .iphone11 {
     display: none;
   }
   .desk {
@@ -273,6 +274,12 @@ header {
   z-index: 1;
 }
 
+@media (min-width: 375px) {
+  .banner__top-title {
+    font-size: 19px;
+    line-height: 21px;
+  }
+}
 @media (min-width: 1366px) {
   .banner__top-title {
     font-size: 24px;
@@ -293,6 +300,12 @@ header {
   color: #E8E8E8;
 }
 
+@media (min-width: 375px) {
+  .banner__top-description {
+    font-size: 70px;
+    line-height: 79px;
+  }
+}
 @media (min-width: 1024px) {
   .banner__top-description {
     margin-top: 14px;
@@ -336,6 +349,12 @@ header {
   border-radius: 4px;
 }
 
+@media (min-width: 375px) {
+  .banner__top-btn {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
 @media (min-width: 1024px) {
   .banner__top-btn {
     margin-top: 63px;
@@ -368,8 +387,13 @@ header {
     margin-top: 21px;
   }
 }
+@media (max-height: 640px) and (min-width: 320px) {
+  .banner__bottom {
+    display: none;
+  }
+}
 .banner__bottom {
-  margin-bottom: 0px;
+  margin-bottom: 0;
   margin-left: -20px;
   margin-right: -20px;
   background-color: #00003D;

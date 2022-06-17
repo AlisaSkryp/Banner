@@ -1,5 +1,4 @@
 @import 'vars';
-@import 'fonts';
 
 html {
   box-sizing: border-box;
@@ -20,6 +19,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   margin-left: 15px;
   margin-right: 15px;
 }
@@ -156,9 +156,7 @@ header {
     margin-right: 140px;
   }
 }
-.advert__banner-teams span{
-  font-family:;
-}
+
 .advert__banner-left {
   display: flex;
   flex-direction: column;
@@ -264,8 +262,17 @@ header {
   display: none;
 }
 
+@media(min-width: 375px) {
+  .mobile, .desk, .tablet {
+    display: none;
+  }
+  .iphone11 {
+    display: block;
+  }
+}
+
 @media(min-width: 768px) {
-  .mobile, .desk {
+  .mobile, .desk,.iphone11 {
     display: none;
   }
   .tablet {
@@ -274,7 +281,7 @@ header {
 }
 
 @media(min-width: 1366px) {
-  .mobile, .tablet {
+  .mobile, .tablet ,.iphone11{
     display: none;
   }
   .desk {
@@ -301,6 +308,14 @@ header {
   z-index: 1;
 }
 
+@media(min-width: 375px) {
+  .banner__top-title {
+    font-size: 19px;
+    line-height: 21px;
+
+  }
+}
+
 @media(min-width: 1366px) {
   .banner__top-title {
     font-size: 24px;
@@ -322,6 +337,15 @@ header {
   text-transform: uppercase;
   color: #E8E8E8;
 
+}
+
+@media(min-width: 375px) {
+
+  .banner__top-description {
+    font-size: 70px;
+    line-height: 79px;
+
+  }
 }
 
 @media(min-width: 1024px) {
@@ -374,6 +398,14 @@ header {
 
 }
 
+@media(min-width: 375px) {
+  .banner__top-btn {
+    font-size: 22px;
+    line-height: 29px;
+  }
+
+}
+
 @media(min-width: 1024px) {
   .banner__top-btn {
     margin-top: 63px;
@@ -413,14 +445,21 @@ header {
   }
 }
 
+@media(max-height: 640px) and (min-width: 320px) {
+  .banner__bottom {
+    display: none;
+  }
+}
+
 .banner__bottom {
-  margin-bottom: 0px;
+  margin-bottom: 0;
   margin-left: -20px;
   margin-right: -20px;
   background-color: #00003D;
   max-height: 257px;
 
 }
+
 
 .banner__bottom-wrap {
   font-family: "Suisse Int'l", sans-serif;
@@ -430,7 +469,7 @@ header {
   color: #E3E3E3;
   margin-top: 37px;
   padding: 16px 16px 41px 35px;
-  justify-content: center
+  justify-content: center;
 }
 
 .banner__bottom-row,
