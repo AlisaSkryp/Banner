@@ -1,0 +1,19 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #000055;
+    height: 100vh;
+    min-width: 381px;
+    overflow-x: hidden;
+}
+
+
+/*# sourceMappingURL=main.css.map */

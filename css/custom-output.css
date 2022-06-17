@@ -1,0 +1,457 @@
+@font-face {
+  font-family: "Suisse Int'l Bold";
+  src: url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.eot");
+  src: url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.woff") format("woff"), url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8e52b05f6b6c1a65b0c49c8286f690b2.svg#Suisse Int'l Bold") format("svg");
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #000055;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin-left: 75px;
+    margin-right: 93px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    margin-right: 45px;
+    margin-left: -24px;
+  }
+}
+@media (min-width: 1366px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 135px;
+    margin-left: 84px;
+  }
+}
+header {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 320px;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 1024px;
+  }
+}
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 768px;
+  }
+}
+.logo__link {
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+@media (min-width: 1024px) {
+  .logo__link {
+    padding: unset;
+  }
+}
+.logo__link-desk,
+.logo__link-tab {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .logo__link-tab {
+    display: block;
+  }
+  .logo__link-desk,
+.logo__link-mob {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .logo__link-mob {
+    display: none;
+  }
+  .logo__link-tab {
+    display: none;
+  }
+  .logo__link-desk {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .section {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media (min-width: 1366px) {
+  .section {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.advert {
+  display: flex;
+  margin-left: 15px;
+  margin-top: -38px;
+}
+
+@media (min-width: 768px) {
+  .advert {
+    margin-left: 17px;
+  }
+}
+@media (min-width: 1024px) {
+  .advert {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+  }
+}
+@media (min-width: 1366px) {
+  .advert {
+    margin-right: 140px;
+  }
+}
+.advert__banner-teams span {
+  font-family: vul;
+}
+
+.advert__banner-left {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #FF267E;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #EDEDED;
+  border-radius: 4px;
+}
+
+.advert__banner-date {
+  padding: 3px 10px;
+  background-color: #FF267E;
+}
+
+.advert__banner-time {
+  padding: 3px 10px;
+}
+
+.advert__banner-right {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 24px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #E8E8E8;
+}
+
+@media (min-width: 1024px) {
+  .advert__banner-date {
+    padding: 14px 18px;
+  }
+  .advert__banner-time {
+    padding: 11px 10px;
+  }
+  .advert__banner-right {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 50px;
+    /* identical to box height, or 114% */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .advert__banner-left {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+.image {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+@media (min-width: 1024px) {
+  .image {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .banner__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -150px;
+    margin-left: 54px;
+  }
+}
+@media (min-width: 1366px) {
+  .banner__top {
+    margin-top: -97px;
+    margin-left: 78px;
+  }
+}
+.tablet,
+.desk {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile, .desk {
+    display: none;
+  }
+  .tablet {
+    display: block;
+  }
+}
+@media (min-width: 1366px) {
+  .mobile, .tablet {
+    display: none;
+  }
+  .desk {
+    display: block;
+    margin-top: -130px;
+  }
+}
+.banner__top-title {
+  font-family: "Suisse Int'l", sans-serif;
+  padding: 8px 10px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background-color: #FF267E;
+  color: #E8E8E8;
+  margin-top: -35px;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1366px) {
+  .banner__top-title {
+    font-size: 24px;
+    line-height: 27px;
+    padding: 16px 19px;
+  }
+}
+.banner__top-description {
+  font-family: "Suisse Int'l", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 58px;
+  line-height: 60px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #E8E8E8;
+}
+
+@media (min-width: 1024px) {
+  .banner__top-description {
+    margin-top: 14px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 101px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #E8E8E8;
+  }
+}
+@media (min-width: 1366px) {
+  .banner__top-description {
+    font-size: 110px;
+    line-height: 101px;
+  }
+}
+.banner__top-bet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.banner__top-btn {
+  font-family: "Suisse Int'l", sans-serif;
+  border: none;
+  background-color: #05C489;
+  color: #000055;
+  padding: 16px 46px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+@media (min-width: 1024px) {
+  .banner__top-btn {
+    margin-top: 63px;
+  }
+}
+@media (min-width: 1366px) {
+  .banner__top-btn {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+.banner__top-bet .banner__top-link {
+  font-family: "Suisse Int'l", sans-serif;
+  margin-top: 13px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: #E3E3E3;
+}
+
+@media (min-width: 1366px) {
+  .banner__top-bet .banner__top-link {
+    line-height: 16px;
+    margin-top: 21px;
+  }
+}
+.banner__bottom {
+  margin-bottom: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+  background-color: #00003D;
+  max-height: 257px;
+}
+
+.banner__bottom-wrap {
+  font-family: "Suisse Int'l", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  color: #E3E3E3;
+  margin-top: 37px;
+  padding: 16px 16px 41px 35px;
+  justify-content: center;
+}
+
+.banner__bottom-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.banner__bottom-row a {
+  margin-right: 18px;
+}
+
+.banner__bottom-sum {
+  font-family: "Suisse Int'l", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 375px) {
+  .banner__bottom-sum {
+    font-size: 42px;
+    line-height: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .banner__bottom-sum {
+    font-size: 44px;
+    line-height: 22px;
+  }
+  .banner__bottom-bet {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.banner__bottom-text {
+  font-family: "Suisse Int'l", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 12px;
+  /* or 109% */
+  margin-top: 11px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 375px) {
+  .banner__bottom-text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media (min-width: 1024px) {
+  .banner__bottom-text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+.banner__bottom-plus {
+  margin-right: 8px;
+}
+
+/*# sourceMappingURL=custom-output.css.map */
